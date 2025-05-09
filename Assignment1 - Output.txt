@@ -1,0 +1,54 @@
+C:\gitRepo\Python-Assigment>python Assignment1_1.py
+Hello From Fun
+
+C:\gitRepo\Python-Assigment>python Assignment1_2.py
+Enter Number to: 11
+odd Number
+
+C:\gitRepo\Python-Assigment>python Assignment1_2.py
+Enter Number to: 8
+Even Number
+
+C:\gitRepo\Python-Assigment>python Assignment1_3.py
+Enter Number No1 : 11
+Enter Number No2 : 5
+output 16
+
+C:\gitRepo\Python-Assigment>python Assignment1_4.py
+Marvellous
+Marvellous
+Marvellous
+Marvellous
+Marvellous
+
+C:\gitRepo\Python-Assigment>python Assignment1_5.py
+10      9       8       7       6       5       4       3       2       1
+C:\gitRepo\Python-Assigment>python Assignment1_6.py
+Enter Number to: 11
+Positive Number
+
+C:\gitRepo\Python-Assigment>python Assignment1_6.py
+Enter Number to: -8
+Negative Number
+
+C:\gitRepo\Python-Assigment>python Assignment1_6.py
+Enter Number to: 0
+zero Number
+
+C:\gitRepo\Python-Assigment>python Assignment1_7.py
+Enter Number to: 8
+False
+
+C:\gitRepo\Python-Assigment>python Assignment1_7.py
+Enter Number to: 25
+True
+
+C:\gitRepo\Python-Assigment>python Assignment1_8.py
+Enter Number: 5
+*       *       *       *       *
+C:\gitRepo\Python-Assigment>python Assignment1_9.py
+2       4       6       8       10      12      14      16      18      20
+C:\gitRepo\Python-Assigment>python Assignment1_10.py
+Enter the text to calculate the len :
+marvellous
+10
