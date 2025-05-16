@@ -1,5 +1,5 @@
 def main():
-    print("Enter no Element to add : ", end = "")
+    print("Enter no : ", end = "")
     no = input()
     print(len(no))
 

@@ -10,7 +10,7 @@ def main():
     no = int(input())
     if no >=1:
         result = getFactor(no)
-        if len(result)<2:
+        if len(result)<2 and result !=1 :
             print("Prime Number")
         else:
             print("Not Prime Number")
