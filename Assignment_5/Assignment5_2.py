@@ -5,7 +5,6 @@ def ChkVowel(Value1):
     else :
         False
         
-    
 def main():
     
     print("Enter a Char : ", end = "")
