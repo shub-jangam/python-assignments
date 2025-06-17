@@ -65,7 +65,7 @@ def main():
             print("Please provide valid absolute path")
 
         else:
-            logFileName = createlogFile(sys.argv[0],sys.argv[0])
+            logFileName = createlogFile("Log",sys.argv[0],".txt")
             DirectoryDublicate(sys.argv[1],logFileName)          
 
     else:
