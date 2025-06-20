@@ -77,18 +77,18 @@ def main():
     print("--------------- Marvellous Automation ----------------")
     print(Border)
 
-    if(len(sys.argv) == 3):
+    if(len(sys.argv) == 4):
         if((sys.argv[1] == "--h") or (sys.argv[1] == "--H")):
             print("This application is used to perform directory cleaning")
             print("This is the directory automation script")
 
         elif((sys.argv[1] == "--u") or (sys.argv[1] == "--U")):
             print("Use the given script as ")
-            print("ScriptName.py  NameOfDirctory scheduleTimeInMin")
+            print("ScriptName.py  NameOfDirctory scheduleTimeInMin Email ID" )
             print("Please provide valid absolute path")
 
         else:
-            schedule.every(int(sys.argv[2])).minutes.do(DirectoryDublicateRemoval ,sys.argv[1],sys.argv[0])
+            schedule.every(int(sys.argv[2])).minutes.do(DirectoryDublicateRemoval ,sys.argv[1],sys.argv[0],sys.argv[3])
             while True:
                 schedule.run_pending()
                 time.sleep(1)
