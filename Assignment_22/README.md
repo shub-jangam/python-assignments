@@ -1,0 +1,2 @@
+This is python script which will delete the dublicate files from directory and send mail which contails names of the dublicate files at centain time inverval.
+CMD comand :  python {ScriptName} {DirectoryName} {Time Interval} {EmailID}
