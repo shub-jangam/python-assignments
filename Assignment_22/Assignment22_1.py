@@ -51,23 +51,27 @@ def DirectoryDublicateRemoval(DirectoryName,scriptName,recipentEmail):
     print("Absolute path is : "+DirectoryName)
 
     chckSumlist = []
-    count = 0
+    dublicate_file_count = 0
+    total_file_count = 0
 
     for foldername, subFoldenames, FilesNames in os.walk(DirectoryName):
         for fname in FilesNames:
             sourcePath = os.path.join(DirectoryName ,foldername, fname)
+            total_file_count = total_file_count+1
             ret = calculate_checksum(sourcePath)
             if ret in chckSumlist:
-                count = count + 1 
+                dublicate_file_count = dublicate_file_count + 1 
                 os.remove(sourcePath)
                 appendMessage(logFileName, f"{fname} is deleted from {sourcePath}" )
             else:
                 chckSumlist.append(ret)
-    if count ==0:
+    if dublicate_file_count ==0:
         appendMessage(logFileName, "No doublicate file found !!" )
     
+    message = f"Total Number of file Scan is {total_file_count} and dublicate file found are {dublicate_file_count}"
+    
     try:
-        emailUtil.sendEmail(subject="LogFile", attachment_file_path= logFileName, receiver_email=recipentEmail)
+        emailUtil.sendEmail(subject="LogFile", attachment_file_path= logFileName, receiver_email=recipentEmail, emailBody=message)
     except Exception as e:
         print(f'Failed to send email: {e}')
 
