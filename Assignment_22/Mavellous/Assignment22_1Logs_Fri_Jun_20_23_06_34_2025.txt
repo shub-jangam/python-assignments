@@ -1,0 +1,6 @@
+------------------------------------------------------
+This is a log file of Marvellous Automation Scripts
+This is a Assignment22_1.py Script
+------------------------------------------------------
+This is is created at 	 Fri Jun 20 23:06:34 2025	No doublicate file found !!
+------------------------------------------------------
