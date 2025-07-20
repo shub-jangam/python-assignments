@@ -1,0 +1,17 @@
+import pandas as pd
+
+
+data = {
+    'Name' : ['Amit', 'Sagar','Pooja'],
+    'Math':[85,90,78],
+    'Science' :[92,88,80],
+    'English': [75,85,88]
+    
+}
+df = pd.DataFrame(data)
+print(df)
+
+print(df['Name'])
+print(df['Math'])
+print(df['Science'])
+print(df['English'])
