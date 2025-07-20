@@ -1,0 +1,17 @@
+import pandas as pd
+data = {
+    'Name' : ['Amit', 'Sagar','Pooja'],
+    'Math':[85,90,78],
+    'Science' :[92,88,80],
+    'English': [75,85,88]
+    
+}
+df = pd.DataFrame(data)
+print(df)
+df['Gender'] = ['Male' ,'Male', 'Female']
+df['Total'] = df['Math'] +df['Science']+ df['English']
+
+print("updated DF")
+print(df)
+
+print(df.groupby(['Gender'])['Total'].mean())
