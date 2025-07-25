@@ -8,33 +8,30 @@ from sklearn.metrics import accuracy_score
 
 
 def PlayPredictor(csvFilePath):
-    df = pd.read_csv(csvFilePath)
-    # Load Data and get Insides 
-    # print("Dataset loaded succesfully !! ")
-    # print("Dimentions of dataset is : ",df.shape)
-    # print(30*'-')
-    # print(df.head())
+    df = pd.read_csv(csvFilePath) 
+    print("Dataset loaded succesfully !! ")
+    print("Dimentions of dataset is : ",df.shape)
+    print(30*'-')
+    print(df.head())
     
     # # Drop Column unnamed 
     df.drop(columns=['Unnamed: 0'], inplace=True)
     # print("After Droping the column")
     # print(df.head())
 
-    # # Check for Missing values 
-    # print(30*'-')
-    # print("Missing values in each column", df.isnull().sum())
-    # print(30*'-')
+    # Check for Missing values 
+    print(30*'-')
+    print("Missing values in each column", df.isnull().sum())
+    print(30*'-')
 
 
-    # sns.countplot(x='Temperature', hue='Play', data=df)
-    # plt.title("Go Out by Temperature")
-    # plt.show()
+    sns.countplot(x='Temperature', hue='Play', data=df)
+    plt.title("Go Out by Temperature")
+    plt.show()
 
-    
-    # sns.countplot(x='Whether', hue='Play', data=df)
-    # plt.title("Go Out by Temperature")
-    # plt.show()
-
+    sns.countplot(x='Whether', hue='Play', data=df)
+    plt.title("Go Out by Temperature")
+    plt.show()
 
     # Dataset have Text info so we need to find in Unqiue set values 
     print('Unqiue values for Each of the column : Whether') 
@@ -55,7 +52,6 @@ def PlayPredictor(csvFilePath):
     mapping = {'Yes':1 ,'No':0}
     df['Play'] = df['Play'].replace(mapping)
     #print(df.head())
-
     # train_test_split and Modle creation 
     x = df.drop('Play', axis=1)
     y = df['Play']
